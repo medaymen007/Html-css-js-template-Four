@@ -1,0 +1,2282 @@
+            /*Start Global Rules*/
+            
+            * {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            
+            html {
+                scroll-behavior: smooth;
+            }
+            
+            button {
+                cursor: pointer;
+            }
+            
+            html {
+                scroll-behavior: smooth;
+            }
+            /*we take the font of site from google font and it change every time we have new site*/
+            
+            body {
+                font-family: 'Cairo', sans-serif;
+            }
+            
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            /*this code for the size of all screen*/
+            
+            @media (min-width: 768px) {
+                .container {
+                    width: 750px;
+                }
+            }
+            /*Medium */
+            
+            @media (min-width: 992px) {
+                .container {
+                    width: 970px;
+                }
+            }
+            /*-Large- */
+            
+            @media (min-width: 1200px) {
+                .container {
+                    width: 1170px;
+                }
+            }
+            /*container*/
+            
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            /*end global rules*/
+            /* variables */
+            
+             :root {
+                --main-background: #ececec;
+                --main-divPadding: 20px;
+                --main-border-radius: 5%;
+                --divPrincipal-backGround-color: #9fc7e347;
+                --divPrincipal-height: 100%;
+                --divPrincipal-width: 100%;
+                --divItems-padding: 20px;
+            }
+            /****** star section principal ******/
+            
+            .divPrincipal {
+                display: flex;
+            }
+            
+            .divPrincipal .allDIVS {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+            /***** star side bar ****/
+            
+            .sideBarSection {
+                background-color: white;
+                padding: 20px;
+                width: 200px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                box-shadow: 8px -8px 20px 0px #e8e4e4;
+                height: 760px;
+                z-index: 2;
+            }
+            
+            .sideBarSection .titel {
+                position: relative;
+            }
+            
+            .sideBarSection .titel::before {
+                position: absolute;
+                content: "";
+                background-color: black;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                bottom: -13px;
+                left: 45%;
+            }
+            
+            .sideBarSection .titel::after {
+                position: absolute;
+                content: "";
+                background-color: black;
+                width: 141%;
+                height: 3px;
+                bottom: -10px;
+                left: -16px;
+            }
+            
+            .sideBarSection .divOfButtons {
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+            }
+            
+            .sideBarSection .divOfButtons button {
+                background-color: white;
+                border: none;
+                margin-top: 15px;
+                padding: 5px;
+                border-radius: 5px;
+            }
+            
+            .sideBarSection .divOfButtons button:hover {
+                background-color: var(--main-background);
+            }
+            /*star section of componentNevBar*/
+            
+            .nevBarComponent {
+                background-color: white;
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                height: 70px;
+                align-items: center;
+                width: 100%;
+            }
+            
+            .nevBarComponent img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-left: 10px;
+            }
+            
+            .nevBarComponent .notification {
+                display: flex;
+                align-items: center;
+            }
+            
+            .nevBarComponent input {
+                padding: 3px;
+                border-radius: 7px;
+                border-color: #e8e4e4;
+            }
+            /*star section of dashboard*/
+            
+            .sectionOfDashboard {
+                background-color: #9fc7e347;
+                height: 100%;
+                width: 100%;
+                z-index: 1;
+            }
+            /* componentTitel */
+            
+            .titelComponent {
+                position: relative;
+                margin-left: 20px;
+            }
+            
+            .titelComponent::after {
+                position: absolute;
+                content: "";
+                background-color: white;
+                width: 123px;
+                height: 3px;
+                bottom: -6px;
+                left: 0;
+                z-index: 1;
+            }
+            
+            .titelComponent::before {
+                position: absolute;
+                content: "";
+                background-color: black;
+                width: 90px;
+                height: 3px;
+                bottom: -6px;
+                left: 0;
+                z-index: 2;
+            }
+            /*end titel component*/
+            
+            .sectionOfDashboard .divItems {
+                padding: var(--divItems-padding);
+                display: grid;
+                grid-template-areas: "one two three" "four five six" "seven eight nine" "ten eleven twelev" "therty therty therty";
+                gap: 20px;
+                grid-template-columns: repeat(3, 400px);
+            }
+            
+            .sectionOfDashboard .divItems .welcome {
+                height: 350px;
+                background-color: white;
+                grid-area: one;
+            }
+            
+            .sectionOfDashboard .divItems .quickDraft {
+                height: 350px;
+                background-color: white;
+                grid-area: two;
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget {
+                height: 350px;
+                background-color: white;
+                grid-area: three;
+            }
+            
+            .sectionOfDashboard .divItems .ticketStatistics {
+                height: 350px;
+                background-color: white;
+                grid-area: four;
+            }
+            
+            .sectionOfDashboard .divItems .latestNews {
+                grid-area: five;
+                background-color: white;
+                height: 350px;
+            }
+            
+            .sectionOfDashboard .divItems .latestTasks {
+                grid-area: six;
+                background-color: white;
+                height: 350px;
+            }
+            
+            .sectionOfDashboard .divItems .topSearchItems {
+                height: 350px;
+                background-color: white;
+                grid-area: seven;
+            }
+            
+            .sectionOfDashboard .divItems .letestUploads {
+                grid-area: eight;
+                height: 350px;
+                background-color: white;
+            }
+            
+            .sectionOfDashboard .divItems .lastProjectProgress {
+                grid-area: nine;
+                height: 350px;
+                background-color: white;
+            }
+            
+            .sectionOfDashboard .divItems .reminders {
+                grid-area: ten;
+                height: 350px;
+                background-color: white;
+            }
+            
+            .sectionOfDashboard .divItems .latestPost {
+                grid-area: eleven;
+                height: 350px;
+                background-color: white;
+            }
+            
+            .sectionOfDashboard .divItems .socialMedia {
+                grid-area: twelev;
+                height: 350px;
+                background-color: white;
+            }
+            
+            .sectionOfDashboard .divItems .projects {
+                grid-area: therty;
+                /* height: 350px;*/
+                background-color: white;
+            }
+            /******* start section of welcome ******/
+            
+            .sectionOfDashboard .divItems .welcome {
+                display: flex;
+                flex-direction: column;
+                border-radius: var(--main-border-radius);
+            }
+            
+            .sectionOfDashboard .divItems .welcome .head {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: var(--main-background);
+                height: 100px;
+                padding: var(--main-divPadding);
+                border-top-left-radius: var(--main-border-radius);
+                border-top-right-radius: var(--main-border-radius);
+            }
+            
+            .sectionOfDashboard .divItems .welcome .introdiction {
+                display: flex;
+                justify-content: space-between;
+                margin: 43px 0 10px;
+                border-top: #e8e4e4 solid 1px;
+                border-bottom: #e8e4e4 solid 1px;
+                padding: 20px 30px;
+            }
+            
+            .sectionOfDashboard .divItems .welcome .image {
+                width: 100px;
+            }
+            
+            .sectionOfDashboard .divItems .welcome .image img {
+                width: 100%;
+            }
+            
+            .sectionOfDashboard .divItems .welcome .imageProfile {
+                position: relative;
+            }
+            
+            .sectionOfDashboard .divItems .welcome .imageProfile img {
+                position: absolute;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                border: white solid 5px;
+                top: -22px;
+                left: 9px
+            }
+            
+            .sectionOfDashboard .divItems .welcome .button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100px;
+            }
+            
+            .sectionOfDashboard .divItems .welcome button {
+                border: none;
+                color: white;
+                background-color: royalblue;
+                border-radius: 10%;
+                padding: 5px;
+                width: 70px;
+            }
+            /* star quick Draft*/
+            
+            .sectionOfDashboard .divItems .quickDraft {
+                padding: var(--main-divPadding);
+                display: flex;
+                flex-direction: column;
+                border-radius: var(--main-border-radius);
+            }
+            
+            .sectionOfDashboard .divItems .quickDraft .divPrincipale {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .sectionOfDashboard .divItems .quickDraft .titel {
+                margin-bottom: 15px;
+            }
+            
+            .sectionOfDashboard .divItems .quickDraft .divPrincipale input,
+            .sectionOfDashboard .divItems .quickDraft .divPrincipale textarea {
+                margin-bottom: 5px;
+                padding: 10px;
+                border: none;
+                background-color: var(--main-background);
+                border-radius: 5px;
+            }
+            
+            .sectionOfDashboard .divItems .quickDraft .divbutton {
+                display: flex;
+                justify-content: flex-end;
+            }
+            
+            .sectionOfDashboard .divItems .quickDraft .divbutton button {
+                border: none;
+                color: white;
+                background-color: royalblue;
+                border-radius: 10%;
+                padding: 5px;
+                width: 70px;
+            }
+            /*star yearly Target*/
+            
+            .sectionOfDashboard .divItems .yearlyTarget {
+                display: flex;
+                flex-direction: column;
+                padding: var(--main-divPadding);
+                border-radius: var(--main-border-radius);
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .caption {
+                margin-bottom: 15px;
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .money,
+            .sectionOfDashboard .divItems .yearlyTarget .project,
+            .sectionOfDashboard .divItems .yearlyTarget .team {
+                display: flex;
+                margin-bottom: 30px;
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50px;
+                height: 50px;
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .money .icon {
+                background-color: rgba(65, 105, 225, 0.414);
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .money .icon i {
+                color: royalblue;
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .project .icon {
+                background-color: rgba(255, 166, 0, 0.414);
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .project .icon i {
+                color: orange;
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .team .icon {
+                background-color: rgba(0, 128, 0, 0.414);
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .team .icon i {
+                color: green;
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .captionAndPersontage {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .captionAndPersontage .per {
+                position: relative;
+                width: 100%;
+                height: 6px;
+                margin-left: 7px;
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .captionAndPersontage .captionItems {
+                margin-left: 7px;
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .money .captionAndPersontage .per {
+                background-color: rgba(65, 105, 225, 0.414);
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .money .captionAndPersontage .per span {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 80%;
+                background-color: royalblue;
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .project .captionAndPersontage .per {
+                background-color: rgba(255, 166, 0, 0.414);
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .project .captionAndPersontage .per span {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 55%;
+                background-color: orange;
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .team .captionAndPersontage .per {
+                background-color: rgba(0, 128, 0, 0.414);
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .team .captionAndPersontage .per span {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 75%;
+                background-color: green;
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .captionAndPersontage .captionItems p {
+                position: relative;
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .money .captionAndPersontage .captionItems p::after {
+                position: absolute;
+                content: "80%";
+                background-color: royalblue;
+                width: 34px;
+                height: 22px;
+                top: 0;
+                right: 30px;
+                font-size: 13px;
+                border-radius: 2px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .money .captionAndPersontage .captionItems p::before {
+                position: absolute;
+                content: "";
+                background-color: royalblue;
+                width: 10px;
+                height: 10px;
+                top: 15px;
+                right: 41px;
+                transform: rotate(45deg);
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .project .captionAndPersontage .captionItems p::after {
+                position: absolute;
+                content: "50%";
+                background-color: orange;
+                width: 34px;
+                height: 22px;
+                top: 0;
+                right: 98px;
+                font-size: 13px;
+                border-radius: 2px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .project .captionAndPersontage .captionItems p::before {
+                position: absolute;
+                content: "";
+                background-color: orange;
+                width: 10px;
+                height: 10px;
+                top: 15px;
+                right: 110px;
+                transform: rotate(45deg);
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .team .captionAndPersontage .captionItems p::after {
+                position: absolute;
+                content: "50%";
+                background-color: green;
+                width: 34px;
+                height: 22px;
+                top: 0;
+                right: 45px;
+                font-size: 13px;
+                border-radius: 2px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .sectionOfDashboard .divItems .yearlyTarget .team .captionAndPersontage .captionItems p::before {
+                position: absolute;
+                content: "";
+                background-color: green;
+                width: 10px;
+                height: 10px;
+                top: 15px;
+                right: 56px;
+                transform: rotate(45deg);
+            }
+            /***************************** start section of ticket Statistics **********************/
+            
+            .sectionOfDashboard .divItems .ticketStatistics {
+                display: flex;
+                flex-direction: column;
+                border-radius: var(--main-border-radius);
+                padding: var(--main-divPadding);
+            }
+            
+            .sectionOfDashboard .divItems .ticketStatistics .divprincipal .divOne,
+            .sectionOfDashboard .divItems .ticketStatistics .divprincipal .divTwo {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                height: 80%;
+            }
+            
+            .sectionOfDashboard .divItems .ticketStatistics .divprincipal .divOne {
+                margin-top: 10px;
+            }
+            
+            .sectionOfDashboard .divItems .ticketStatistics .divprincipal .divOne .total,
+            .sectionOfDashboard .divItems .ticketStatistics .divprincipal .divOne .pending,
+            .sectionOfDashboard .divItems .ticketStatistics .divprincipal .divTwo .closed,
+            .sectionOfDashboard .divItems .ticketStatistics .divprincipal .divTwo .remove {
+                border: solid 2px var(--main-background);
+                width: 90%;
+                height: 80%;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 5px;
+                border-radius: var(--main-border-radius);
+            }
+            
+            .sectionOfDashboard .divItems .ticketStatistics .divprincipal .divOne .total i {
+                color: orange;
+            }
+            
+            .sectionOfDashboard .divItems .ticketStatistics .divprincipal .divOne .pending i {
+                color: blue;
+            }
+            
+            .sectionOfDashboard .divItems .ticketStatistics .divprincipal .divTwo .closed i {
+                color: green;
+            }
+            
+            .sectionOfDashboard .divItems .ticketStatistics .divprincipal .divTwo .remove i {
+                color: red;
+            }
+            
+            .sectionOfDashboard .divItems .ticketStatistics .divprincipal .divOne .total span,
+            .sectionOfDashboard .divItems .ticketStatistics .divprincipal .divOne .pending span,
+            .sectionOfDashboard .divItems .ticketStatistics .divprincipal .divTwo .closed span,
+            .sectionOfDashboard .divItems .ticketStatistics .divprincipal .divTwo .remove span {
+                line-height: 23px;
+            }
+            /*************************** star section of latest News ********************************/
+            
+            .sectionOfDashboard .divItems .latestNews {
+                border-radius: var(--main-border-radius);
+                padding: var(--main-divPadding);
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .sectionOfDashboard .divItems .latestNews h3 {
+                margin-bottom: 5px;
+            }
+            
+            .sectionOfDashboard .divItems .latestNews div {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+                padding-bottom: 6px;
+            }
+            
+            .sectionOfDashboard .divItems .latestNews .caption {
+                margin-left: 10px;
+            }
+            
+            .sectionOfDashboard .divItems .latestNews div:not(:last-child) {
+                border-bottom: solid 1px var(--main-background);
+            }
+            
+            .sectionOfDashboard .divItems .latestNews .image {
+                width: 80px;
+            }
+            
+            .sectionOfDashboard .divItems .latestNews .image img {
+                width: 100%;
+                border-radius: 5px;
+            }
+            
+            .sectionOfDashboard .divItems .latestNews div .caption {
+                display: flex;
+                flex-direction: column;
+                line-height: 25px;
+            }
+            
+            .sectionOfDashboard .divItems .latestNews span {
+                font-size: small;
+            }
+            
+            .sectionOfDashboard .divItems .latestNews .spe {
+                background-color: var(--main-background);
+                width: 80px;
+                height: 20px;
+                text-align: center;
+                border-radius: 5px;
+            }
+            /************************ star section of latest Tasks *******************/
+            
+            .sectionOfDashboard .divItems .latestTasks {
+                border-radius: var(--main-border-radius);
+                padding: var(--main-divPadding);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .sectionOfDashboard .divItems .latestTasks div {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 10px;
+            }
+            
+            .sectionOfDashboard .divItems .latestTasks div:not(:last-child) {
+                border-bottom: 1px solid var(--main-background);
+            }
+            
+            .sectionOfDashboard .divItems .latestTasks div:nth-child(5) {
+                opacity: .4;
+            }
+            
+            .sectionOfDashboard .divItems .latestTasks div:nth-child(5) span {
+                text-decoration: line-through;
+            }
+            /************ star section top Search Items *****************/
+            
+            .sectionOfDashboard .divItems .topSearchItems {
+                border-radius: var(--main-border-radius);
+                padding: var(--main-divPadding);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .sectionOfDashboard .divItems .topSearchItems div .spe {
+                background-color: var(--main-background);
+                width: 50px;
+                height: 20px;
+                text-align: center;
+                border-radius: 5px;
+            }
+            
+            .sectionOfDashboard .divItems .topSearchItems .spee {
+                color: #cfcfcf;
+            }
+            
+            .sectionOfDashboard .divItems .topSearchItems div {
+                display: flex;
+                justify-content: space-between;
+            }
+            /*************** star section of letest Uploads ****************/
+            
+            .sectionOfDashboard .divItems .letestUploads {
+                border-radius: var(--main-border-radius);
+                padding: var(--main-divPadding);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .sectionOfDashboard .divItems .letestUploads span,
+            .sectionOfDashboard .divItems .letestUploads .image {
+                display: flex;
+            }
+            
+            .sectionOfDashboard .divItems .letestUploads .caption p:first-child {
+                width: 200px;
+            }
+            
+            .sectionOfDashboard .divItems .letestUploads .caption {
+                margin-left: 7px;
+            }
+            
+            .sectionOfDashboard .divItems .letestUploads .caption p:last-child {
+                color: #a2a0a0;
+                font-size: small;
+            }
+            
+            .sectionOfDashboard .divItems .letestUploads .spe {
+                background-color: var(--main-background);
+                width: 50px;
+                height: 20px;
+                text-align: center;
+                border-radius: 5px;
+            }
+            
+            .sectionOfDashboard .divItems .letestUploads span {
+                justify-content: space-between;
+                display: flex;
+            }
+            
+            .sectionOfDashboard .divItems .letestUploads .image {
+                width: 10%;
+            }
+            
+            .sectionOfDashboard .divItems .letestUploads .image img {
+                width: 100%;
+            }
+            /*************************** last Project Progress *************************/
+            
+            .sectionOfDashboard .divItems .lastProjectProgress {
+                padding: var(--main-divPadding);
+                border-radius: var(--main-border-radius);
+            }
+            
+            .sectionOfDashboard .divItems .lastProjectProgress p {
+                position: relative;
+                margin-left: 31px;
+                margin-bottom: 14px
+            }
+            
+            .sectionOfDashboard .divItems .lastProjectProgress p::before {
+                position: absolute;
+                content: "";
+                width: 15px;
+                height: 15px;
+                background-color: white;
+                border: royalblue solid 3px;
+                border-radius: 50%;
+                left: -29px;
+            }
+            
+            .sectionOfDashboard .divItems .lastProjectProgress .spe1::after {
+                position: absolute;
+                content: "";
+                width: 12.5px;
+                height: 12.5px;
+                background-color: royalblue;
+                border-radius: 50%;
+                left: -25px;
+                bottom: 2px;
+            }
+            
+            .sectionOfDashboard .divItems .lastProjectProgress .spe2::after {
+                position: absolute;
+                content: "";
+                width: 12.5px;
+                height: 12.5px;
+                background-color: rgba(65, 105, 225, 0.401);
+                border-radius: 50%;
+                left: -25px;
+                bottom: 2px;
+            }
+            
+            .sectionOfDashboard .divItems .lastProjectProgress h3 {
+                position: relative;
+                margin-bottom: 14px;
+            }
+            
+            .sectionOfDashboard .divItems .lastProjectProgress h3::before {
+                position: absolute;
+                content: "";
+                background-color: royalblue;
+                height: 126px;
+                width: 2px;
+                top: 47px;
+                left: 11px;
+            }
+            
+            .sectionOfDashboard .divItems .lastProjectProgress .image {
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                margin-top: 9px;
+            }
+            
+            .sectionOfDashboard .divItems .lastProjectProgress .image img {
+                width: 40%;
+                opacity: .3;
+            }
+            /******************* star section of reminders ************************/
+            
+            .sectionOfDashboard .divItems .reminders {
+                padding: var(--main-divPadding);
+                border-radius: var(--main-border-radius);
+            }
+            
+            .sectionOfDashboard .divItems .reminders div {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                margin-top: 17px;
+                margin-left: 35px;
+            }
+            
+            .sectionOfDashboard .divItems .reminders div::before {
+                position: absolute;
+                content: "";
+                width: 3px;
+                background-color: rgba(255, 0, 0, 0.599);
+                height: 37px;
+                left: -13px;
+            }
+            
+            .sectionOfDashboard .divItems .reminders div::after {
+                position: absolute;
+                content: "";
+                width: 13px;
+                height: 13px;
+                background-color: rgba(255, 0, 0, 0.588);
+                border-radius: 50%;
+                left: -34px;
+                top: 11px;
+            }
+            
+            .sectionOfDashboard .divItems .reminders .green::before {
+                background-color: rgba(0, 128, 0, 0.593);
+            }
+            
+            .sectionOfDashboard .divItems .reminders .green::after {
+                background-color: rgba(0, 128, 0, 0.577);
+            }
+            
+            .sectionOfDashboard .divItems .reminders .orange::before {
+                background-color: rgba(255, 166, 0, 0.577);
+            }
+            
+            .sectionOfDashboard .divItems .reminders .orange::after {
+                background-color: rgba(255, 166, 0, 0.577);
+            }
+            
+            .sectionOfDashboard .divItems .reminders .blue::before {
+                background-color: rgba(0, 0, 255, 0.56);
+            }
+            
+            .sectionOfDashboard .divItems .reminders .blue::after {
+                background-color: rgba(0, 0, 255, 0.56);
+            }
+            
+            .sectionOfDashboard .divItems .reminders .one {
+                font-size: small;
+                font-weight: bold;
+            }
+            
+            .sectionOfDashboard .divItems .reminders .two {
+                font-size: small;
+            }
+            /********************** star section of latest Post **********************/
+            
+            .sectionOfDashboard .divItems .latestPost {
+                border-radius: var(--main-border-radius);
+                padding: var(--main-divPadding);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .sectionOfDashboard .divItems .latestPost .user {
+                display: flex;
+                align-items: center;
+            }
+            
+            .sectionOfDashboard .divItems .latestPost .paragraph {
+                padding: 20px 0;
+                border-bottom: 2px solid #ececec;
+                border-top: 2px solid #ececec;
+            }
+            
+            .sectionOfDashboard .divItems .latestPost .user .image {
+                width: 20%;
+            }
+            
+            .sectionOfDashboard .divItems .latestPost .image img {
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+            }
+            
+            .sectionOfDashboard .divItems .latestPost .icon {
+                display: flex;
+                justify-content: space-between;
+            }
+            /****************** star section of social Media ***********************/
+            
+            .sectionOfDashboard .divItems .socialMedia {
+                padding: var(--main-divPadding);
+                border-radius: var(--main-border-radius);
+            }
+            
+            .sectionOfDashboard .divItems .socialMedia .divprincipale {
+                margin-top: 15px;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .sectionOfDashboard .divItems .socialMedia .divprincipale .one {
+                color: white;
+                height: 100%;
+            }
+            
+            .sectionOfDashboard .divItems .socialMedia .divprincipale .one p {
+                margin-left: 10px;
+            }
+            
+            .sectionOfDashboard .divItems .socialMedia .divprincipale i {
+                height: 100%;
+                width: 50px;
+                font-size: 23px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .sectionOfDashboard .divItems .socialMedia .divprincipale .two {
+                color: white;
+                width: 70px;
+                border-radius: 5px;
+                margin-right: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .sectionOfDashboard .divItems .socialMedia .divprincipale .two p {
+                padding: 3px;
+                font-size: small;
+            }
+            
+            .sectionOfDashboard .divItems .socialMedia .divprincipale .twitter {
+                height: 50px;
+                background-color: rgba(0, 234, 255, 0.184);
+            }
+            
+            .sectionOfDashboard .divItems .socialMedia .divprincipale .twitter .two,
+            .sectionOfDashboard .divItems .socialMedia .divprincipale .twitter i {
+                background-color: rgb(0, 234, 255);
+            }
+            
+            .sectionOfDashboard .divItems .socialMedia .divprincipale .facebook {
+                height: 50px;
+                background-color: rgba(0, 140, 255, 0.173);
+            }
+            
+            .sectionOfDashboard .divItems .socialMedia .divprincipale .facebook .two,
+            .sectionOfDashboard .divItems .socialMedia .divprincipale .facebook i {
+                background-color: rgb(0, 140, 255);
+            }
+            
+            .sectionOfDashboard .divItems .socialMedia .divprincipale .youTube {
+                height: 50px;
+                background-color: rgba(255, 0, 0, 0.205);
+            }
+            
+            .sectionOfDashboard .divItems .socialMedia .divprincipale .youTube .two,
+            .sectionOfDashboard .divItems .socialMedia .divprincipale .youTube i {
+                background-color: red;
+            }
+            
+            .sectionOfDashboard .divItems .socialMedia .divprincipale .linkedin {
+                height: 50px;
+                background-color: rgba(7, 59, 101, 0.215);
+            }
+            
+            .sectionOfDashboard .divItems .socialMedia .divprincipale .linkedin .two,
+            .sectionOfDashboard .divItems .socialMedia .divprincipale .linkedin i {
+                background-color: rgb(7, 59, 101);
+            }
+            
+            .sectionOfDashboard .divItems .socialMedia .divprincipale .twitter .one p {
+                color: rgb(0, 234, 255);
+            }
+            
+            .sectionOfDashboard .divItems .socialMedia .divprincipale .facebook .one p {
+                color: rgb(0, 140, 255);
+            }
+            
+            .sectionOfDashboard .divItems .socialMedia .divprincipale .youTube .one p {
+                color: red;
+            }
+            
+            .sectionOfDashboard .divItems .socialMedia .divprincipale .linkedin .one p {
+                color: rgb(7, 59, 101);
+            }
+            
+            .sectionOfDashboard .divItems .socialMedia .divprincipale div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            /*************************** star section of projects *****************************/
+            
+            .sectionOfDashboard .divItems .projects {
+                padding: var(--main-divPadding);
+                border-radius: 15px;
+                height: fit-content;
+            }
+            
+            .sectionOfDashboard .divItems .projects table {
+                width: 100%;
+                height: 100%;
+                background-color: var(--main-background);
+                margin: 15px auto;
+                font-size: small;
+            }
+            
+            .sectionOfDashboard .divItems .projects table td {
+                background-color: white;
+                padding: 15px 2px 15px 7px;
+            }
+            
+            .sectionOfDashboard .divItems .projects table th {
+                padding: 15px 2px 15px 7px;
+            }
+            
+            .sectionOfDashboard .divItems .projects table div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 75px;
+                height: 21px;
+                border-radius: 5px;
+                color: white;
+            }
+            
+            .sectionOfDashboard .divItems .projects table .one {
+                background-color: orange;
+            }
+            
+            .sectionOfDashboard .divItems .projects table .two {
+                background-color: blue;
+            }
+            
+            .sectionOfDashboard .divItems .projects table .five {
+                background-color: red;
+            }
+            
+            .sectionOfDashboard .divItems .projects table .comp {
+                background-color: green;
+            }
+            /********************* star section of Setting *********************/
+            
+            .sectionOfSetting {
+                width: var(--divPrincipal-width);
+                background-color: var(--divPrincipal-backGround-color);
+                z-index: -1;
+            }
+            
+            .sectionOfSetting .divItems {
+                padding: var(--divItems-padding);
+                display: grid;
+                grid-template-columns: repeat(3, 410px);
+                gap: 20px;
+            }
+            
+            .sectionOfSetting .divItems .siteControl,
+            .sectionOfSetting .divItems .generalInfo,
+            .sectionOfSetting .divItems .securityInfo,
+            .sectionOfSetting .divItems .socialInfo,
+            .sectionOfSetting .divItems .widgetsControl,
+            .sectionOfSetting .divItems .backupManager {
+                background-color: white;
+                height: 350px;
+            }
+            
+            .sectionOfSetting .divItems .siteControl {
+                display: flex;
+                flex-direction: column;
+                padding: var(--main-divPadding);
+                border-radius: var(--main-border-radius);
+                justify-content: space-between;
+            }
+            
+            .sectionOfSetting .divItems .siteControl .DIVbtn {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .sectionOfSetting .divItems h3,
+            .sectionOfSetting .divItems h5 {
+                margin-bottom: 5px;
+            }
+            
+            .sectionOfSetting .divItems .btnSpe {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                width: 60px;
+                height: 25px;
+                background-color: rgb(0, 140, 255);
+                border-radius: 15px;
+                cursor: pointer;
+            }
+            
+            .sectionOfSetting i {
+                color: rgb(0, 140, 255);
+            }
+            
+            .sectionOfSetting .divItems .btnSpe .iconSpe {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                margin: 2px;
+                cursor: pointer;
+            }
+            
+            .sectionOfSetting .divItems textarea {
+                padding: 10px;
+                border-color: #ececec 2px solid;
+                border-radius: 5px;
+            }
+            /******** star section of general Info********/
+            
+            .sectionOfSetting .divItems .generalInfo {
+                display: flex;
+                flex-direction: column;
+                padding: var(--divItems-padding);
+                border-radius: var(--main-border-radius);
+                justify-content: flex-start;
+            }
+            
+            .sectionOfSetting .divItems .generalInfo .form {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 60%;
+                margin-top: 15px;
+            }
+            
+            .sectionOfSetting .divItems .generalInfo .form p {
+                margin-top: 5px;
+            }
+            
+            .sectionOfSetting .divItems .generalInfo .form input {
+                padding: 3px;
+                border-radius: 5px;
+                border: 1px solid gray;
+                margin-top: 5px;
+            }
+            
+            .sectionOfSetting .divItems .generalInfo .form label {
+                margin-top: 15px;
+            }
+            
+            .sectionOfSetting .divItems .generalInfo .form button {
+                color: rgb(0, 140, 255);
+                border: none;
+                background-color: white;
+            }
+            /************************** Star Section of Security Info *****************************/
+            
+            .securityInfo {
+                display: flex;
+                flex-direction: column;
+                border-radius: var(--main-border-radius);
+                padding: var(--divItems-padding);
+            }
+            
+            .sectionOfSetting h3,
+            .sectionOfSetting p {
+                margin-bottom: 15px;
+            }
+            
+            .securityInfo .password button {
+                background-color: rgb(0, 140, 255);
+                border: none;
+                border-radius: 5px;
+                width: 70px;
+                height: 23px;
+                color: white;
+            }
+            
+            .securityInfo .Devices button {
+                background-color: #e8e4e4;
+                border: none;
+                border-radius: 5px;
+                width: 70px;
+                height: 23px;
+            }
+            
+            .securityInfo .password,
+            .securityInfo .TwoFactor,
+            .securityInfo .Devices {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 15px;
+            }
+            
+            .securityInfo .TwoFactor {
+                border-bottom: 1px solid #ececec;
+                border-top: 1px solid #ececec;
+                padding: 18px 0;
+            }
+            
+            .securityInfo .divItems .btnSpe {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                width: 60px;
+                height: 25px;
+                background-color: rgb(0, 140, 255);
+                border-radius: 15px;
+                cursor: pointer;
+            }
+            
+            .securityInfo i {
+                color: rgb(0, 140, 255);
+            }
+            
+            .securityInfo .divItems .btnSpe .iconSpe {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                margin: 2px;
+                cursor: pointer;
+            }
+            /***************************** star section of social Info ****************************/
+            
+            .socialInfo {
+                border-radius: var(--main-border-radius);
+                padding: var(--divItems-padding);
+            }
+            
+            .socialInfo .twtr,
+            .socialInfo .fb,
+            .socialInfo .linkidin,
+            .socialInfo .yt {
+                color: rgb(106, 106, 106);
+                background-color: var(--main-background);
+                border: solid 1px rgb(106, 106, 106);
+                border-radius: 5px;
+                display: flex;
+                margin-bottom: 15px;
+            }
+            
+            .socialInfo i {
+                color: rgb(106, 106, 106);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 10%;
+                border-right: 1px solid rgb(106, 106, 106);
+            }
+            
+            .socialInfo input {
+                width: 90%;
+                border: none;
+                height: 30px;
+                background-color: var(--main-background);
+                padding: 5px;
+            }
+            
+            .socialInfo input::placeholder {
+                font-size: small;
+            }
+            /****************************** star section of widgets Control *******************************/
+            
+            .widgetsControl {
+                padding: var(--divItems-padding);
+                border-radius: var(--main-border-radius);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            /********************************** backup manager *****************************************/
+            
+            .backupManager {
+                border-radius: var(--main-border-radius);
+                padding: var(--main-divPadding);
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .backupManager>p {
+                margin-bottom: 30px;
+            }
+            
+            .backupManager h3 {
+                margin-bottom: 30px !important;
+            }
+            
+            .backupManager .radio {
+                margin-bottom: 30px;
+            }
+            
+            .backupManager .radio div {
+                margin-bottom: 7px;
+            }
+            
+            .backupManager .mega {
+                display: flex;
+                justify-content: space-between;
+                border-top: 1px solid gainsboro;
+                padding-top: 20px;
+            }
+            
+            .backupManager .mega div {
+                padding: 10px 20px;
+                text-align: center;
+                border: solid 1px gainsboro;
+                border-radius: 5px;
+                width: 30%;
+            }
+            
+            .backupManager .mega .zero {
+                border: solid 1px rgb(0, 140, 255);
+            }
+            
+            .backupManager .mega .zero p {
+                color: rgb(0, 140, 255);
+            }
+            /* star section of profile */
+            
+            .sectionOfProfile {
+                background-color: var(--divPrincipal-backGround-color);
+                width: 100%;
+                z-index: 1;
+            }
+            
+            .sectionOfProfile .divItems {
+                display: grid;
+                gap: 20px;
+                padding: var(--divItems-padding);
+                width: var(--divPrincipal-width);
+            }
+            
+            .sectionOfProfile .divItems .profile,
+            .sectionOfProfile .divItems .mySkills,
+            .sectionOfProfile .divItems .latestActivity {
+                background-color: white;
+                height: 350px;
+            }
+            
+            .sectionOfProfile .divItems .profile {
+                display: flex;
+                padding: var(--main-divPadding);
+                border-radius: 15px;
+                grid-column: span 3;
+            }
+            
+            .sectionOfProfile .divItems .mySkills {
+                grid-column: span 1;
+                padding: var(--main-divPadding);
+                border-radius: var(--main-border-radius);
+            }
+            
+            .sectionOfProfile .divItems .latestActivity {
+                grid-column: span 2;
+                padding: var(--main-divPadding);
+                border-radius: 18px;
+            }
+            
+            .sectionOfProfile .divItems .caption {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 75%;
+            }
+            
+            .sectionOfProfile .divItems .caption .generalInfo,
+            .sectionOfProfile .divItems .caption .personalInfo,
+            .sectionOfProfile .divItems .caption .jobInfo,
+            .sectionOfProfile .divItems .caption .billingInfo {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                padding: 15px;
+            }
+            
+            .sectionOfProfile .divItems .caption .personalInfo,
+            .sectionOfProfile .divItems .caption .jobInfo {
+                border-top: 1px solid #e8e4e4;
+            }
+            
+            .sectionOfProfile .divItems .caption .jobInfo {
+                border-bottom: 1px solid #e8e4e4;
+            }
+            
+            .sectionOfProfile .divItems .user {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                border-right: 1px solid #e8e4e4;
+                height: 100%;
+                width: 20%;
+            }
+            
+            .sectionOfProfile .divItems .user .special {
+                background-color: #ececec;
+                position: relative;
+                width: 100px;
+                height: 3px;
+                border-radius: 15px;
+            }
+            
+            .sectionOfProfile .divItems .user .special span {
+                position: absolute;
+                width: 70%;
+                background-color: rgb(0, 140, 255);
+                height: 100%;
+                left: 0;
+            }
+            
+            .sectionOfProfile .divItems .user .image {
+                width: 62%;
+            }
+            
+            .sectionOfProfile .divItems .user .image img {
+                width: 100%;
+                border-radius: 50%;
+            }
+            
+            .sectionOfProfile .divItems .caption span {
+                color: #a2a0a0;
+            }
+            
+            .sectionOfProfile .divItems .caption {
+                font-size: small;
+            }
+            
+            .sectionOfProfile .divItems .caption .btn {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                width: 80px;
+                height: 20px;
+                border-radius: 20px;
+                background-color: blue;
+            }
+            
+            .sectionOfProfile .divItems .caption .spe {
+                background-color: rgb(226, 221, 221);
+                justify-content: flex-start;
+            }
+            
+            .sectionOfProfile .divItems .caption .spe span {
+                margin-left: 3px;
+            }
+            
+            .sectionOfProfile .divItems .caption .btn span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: white;
+                margin-right: 3px;
+            }
+            
+            .sectionOfProfile .divItems .mySkills {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .sectionOfProfile .divItems .mySkills span {
+                background-color: #ececec;
+                margin-left: 8px;
+                border-radius: 5px;
+                padding: 2px;
+            }
+            
+            .sectionOfProfile .divItems .latestActivity {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .sectionOfProfile .divItems .latestActivity .store,
+            .sectionOfProfile .divItems .latestActivity .academy,
+            .sectionOfProfile .divItems .latestActivity .badges {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+            }
+            
+            .sectionOfProfile .divItems .latestActivity .academy {
+                border-top: solid 1px gainsboro;
+            }
+            
+            .sectionOfProfile .divItems .latestActivity .badges {
+                border-top: solid 1px gainsboro;
+                border-bottom: solid 1px gainsboro;
+                padding: 10px 0 15px 8px;
+            }
+            
+            .sectionOfProfile .divItems .latestActivity .store .one,
+            .sectionOfProfile .divItems .latestActivity .academy .two,
+            .sectionOfProfile .divItems .latestActivity .badges .three,
+            .sectionOfProfile .divItems .latestActivity .store .four {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .sectionOfProfile .divItems .latestActivity i {
+                color: white;
+            }
+            
+            .sectionOfProfile .divItems .latestActivity .store .one .red,
+            .sectionOfProfile .divItems .latestActivity .academy .two .red,
+            .sectionOfProfile .divItems .latestActivity .store .four .red {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: red;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+            
+            .sectionOfProfile .divItems .latestActivity .badges .three .blue {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: blue;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+            /*star section of project*/
+            
+            .sectionOfProject {
+                background-color: var(--divPrincipal-backGround-color);
+                width: 100%;
+                z-index: 1;
+            }
+            
+            .sectionOfProject .divItems {
+                display: grid;
+                gap: 20px;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                padding: var(--divItems-padding);
+                width: var(--divPrincipal-width);
+            }
+            
+            .sectionOfProject .divItems>div {
+                background-color: white;
+                padding: var(--divItems-padding);
+                border-radius: var(--main-border-radius);
+            }
+            /*Aymen Dashboard*/
+            
+            .sectionOfProject .divItems .aymenDashboard {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .sectionOfProject .divItems .aymenDashboard>div {
+                padding-bottom: 10px;
+            }
+            
+            .sectionOfProject .divItems .aymenDashboard .date p {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+            }
+            
+            .sectionOfProject .divItems .aymenDashboard p {
+                color: #5d5d5d;
+            }
+            
+            .sectionOfProject .divItems .aymenDashboard .sideName {
+                display: flex;
+                justify-content: flex-end;
+                border-top: solid 1px gainsboro;
+                border-bottom: solid 1px gainsboro;
+                padding: 10px 0 10px 0;
+            }
+            
+            .sectionOfProject .divItems .aymenDashboard .sideName div {
+                margin-left: 5px;
+                border-radius: 10px;
+                background-color: #e8e4e4;
+                padding: 5px;
+            }
+            
+            .sectionOfProject .divItems .aymenDashboard .bottomSide {
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .sectionOfProject .divItems .aymenDashboard .bottomSide .perso {
+                position: relative;
+                height: 5px;
+                width: 70%;
+                background: #e8e4e4;
+                border-radius: 5px;
+            }
+            
+            .sectionOfProject .divItems .aymenDashboard .bottomSide .perso span {
+                position: absolute;
+                width: 40%;
+                background-color: blue;
+                height: 100%;
+                border-radius: 5px;
+            }
+            /*academy Portal*/
+            
+            .sectionOfProject .divItems .academyPortal {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .sectionOfProject .divItems .academyPortal>div {
+                padding-bottom: 10px;
+            }
+            
+            .sectionOfProject .divItems .academyPortal .date p {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+            }
+            
+            .sectionOfProject .divItems .academyPortal p {
+                color: #5d5d5d;
+            }
+            
+            .sectionOfProject .divItems .academyPortal .sideName {
+                display: flex;
+                justify-content: flex-end;
+                border-top: solid 1px gainsboro;
+                border-bottom: solid 1px gainsboro;
+                padding: 10px 0 10px 0;
+            }
+            
+            .sectionOfProject .divItems .academyPortal .sideName div {
+                margin-left: 5px;
+                border-radius: 10px;
+                background-color: #e8e4e4;
+                padding: 5px;
+            }
+            
+            .sectionOfProject .divItems .academyPortal .bottomSide {
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .sectionOfProject .divItems .academyPortal .bottomSide .perso {
+                position: relative;
+                height: 5px;
+                width: 70%;
+                background: #e8e4e4;
+                border-radius: 5px;
+            }
+            
+            .sectionOfProject .divItems .academyPortal .bottomSide .perso span {
+                position: absolute;
+                width: 70%;
+                background-color: green;
+                height: 100%;
+                border-radius: 5px;
+            }
+            /*Chatting Application*/
+            
+            .sectionOfProject .divItems .chattingApplication {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .sectionOfProject .divItems .chattingApplication>div {
+                padding-bottom: 10px;
+            }
+            
+            .sectionOfProject .divItems .chattingApplication .date p {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+            }
+            
+            .sectionOfProject .divItems .chattingApplication p {
+                color: #5d5d5d;
+            }
+            
+            .sectionOfProject .divItems .chattingApplication .sideName {
+                display: flex;
+                justify-content: flex-end;
+                border-top: solid 1px gainsboro;
+                border-bottom: solid 1px gainsboro;
+                padding: 10px 0 10px 0;
+            }
+            
+            .sectionOfProject .divItems .chattingApplication .sideName div {
+                margin-left: 5px;
+                border-radius: 10px;
+                background-color: #e8e4e4;
+                padding: 5px;
+            }
+            
+            .sectionOfProject .divItems .chattingApplication .bottomSide {
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .sectionOfProject .divItems .chattingApplication .bottomSide .perso {
+                position: relative;
+                height: 5px;
+                width: 70%;
+                background: #e8e4e4;
+                border-radius: 5px;
+            }
+            
+            .sectionOfProject .divItems .chattingApplication .bottomSide .perso span {
+                position: absolute;
+                width: 100%;
+                background-color: red;
+                height: 100%;
+                border-radius: 5px;
+            }
+            /*Ahmed Dashboard*/
+            
+            .sectionOfProject .divItems .ahmedDashboard {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .sectionOfProject .divItems .ahmedDashboard>div {
+                padding-bottom: 10px;
+            }
+            
+            .sectionOfProject .divItems .ahmedDashboard .date p {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+            }
+            
+            .sectionOfProject .divItems .ahmedDashboard p {
+                color: #5d5d5d;
+            }
+            
+            .sectionOfProject .divItems .ahmedDashboard .sideName {
+                display: flex;
+                justify-content: flex-end;
+                border-top: solid 1px gainsboro;
+                border-bottom: solid 1px gainsboro;
+                padding: 10px 0 10px 0;
+            }
+            
+            .sectionOfProject .divItems .ahmedDashboard .sideName div {
+                margin-left: 5px;
+                border-radius: 10px;
+                background-color: #e8e4e4;
+                padding: 5px;
+            }
+            
+            .sectionOfProject .divItems .ahmedDashboard .bottomSide {
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .sectionOfProject .divItems .ahmedDashboard .bottomSide .perso {
+                position: relative;
+                height: 5px;
+                width: 70%;
+                background: #e8e4e4;
+                border-radius: 5px;
+            }
+            
+            .sectionOfProject .divItems .ahmedDashboard .bottomSide .perso span {
+                position: absolute;
+                width: 50%;
+                background-color: green;
+                height: 100%;
+                border-radius: 5px;
+            }
+            /*Ahmed Portal*/
+            
+            .sectionOfProject .divItems .ahmedPortal {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .sectionOfProject .divItems .ahmedPortal>div {
+                padding-bottom: 10px;
+            }
+            
+            .sectionOfProject .divItems .ahmedPortal .date p {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+            }
+            
+            .sectionOfProject .divItems .ahmedPortal p {
+                color: #5d5d5d;
+            }
+            
+            .sectionOfProject .divItems .ahmedPortal .sideName {
+                display: flex;
+                justify-content: flex-end;
+                border-top: solid 1px gainsboro;
+                border-bottom: solid 1px gainsboro;
+                padding: 10px 0 10px 0;
+            }
+            
+            .sectionOfProject .divItems .ahmedPortal .sideName div {
+                margin-left: 5px;
+                border-radius: 10px;
+                background-color: #e8e4e4;
+                padding: 5px;
+            }
+            
+            .sectionOfProject .divItems .ahmedPortal .bottomSide {
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .sectionOfProject .divItems .ahmedPortal .bottomSide .perso {
+                position: relative;
+                height: 5px;
+                width: 70%;
+                background: #e8e4e4;
+                border-radius: 5px;
+            }
+            
+            .sectionOfProject .divItems .ahmedPortal .bottomSide .perso span {
+                position: absolute;
+                width: 60%;
+                background-color: blue;
+                height: 100%;
+                border-radius: 5px;
+            }
+            /*Mohamed Application*/
+            
+            .sectionOfProject .divItems .mohamedApplication {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .sectionOfProject .divItems .mohamedApplication>div {
+                padding-bottom: 10px;
+            }
+            
+            .sectionOfProject .divItems .mohamedApplication .date p {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+            }
+            
+            .sectionOfProject .divItems .mohamedApplication p {
+                color: #5d5d5d;
+            }
+            
+            .sectionOfProject .divItems .mohamedApplication .sideName {
+                display: flex;
+                justify-content: flex-end;
+                border-top: solid 1px gainsboro;
+                border-bottom: solid 1px gainsboro;
+                padding: 10px 0 10px 0;
+            }
+            
+            .sectionOfProject .divItems .mohamedApplication .sideName div {
+                margin-left: 5px;
+                border-radius: 10px;
+                background-color: #e8e4e4;
+                padding: 5px;
+            }
+            
+            .sectionOfProject .divItems .mohamedApplication .bottomSide {
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .sectionOfProject .divItems .mohamedApplication .bottomSide .perso {
+                position: relative;
+                height: 5px;
+                width: 70%;
+                background: #e8e4e4;
+                border-radius: 5px;
+            }
+            
+            .sectionOfProject .divItems .mohamedApplication .bottomSide .perso span {
+                position: absolute;
+                width: 20%;
+                background-color: green;
+                height: 100%;
+                border-radius: 5px;
+            }
+            /*Mohamed Dashboard*/
+            
+            .sectionOfProject .divItems .mohamedDashboard {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .sectionOfProject .divItems .mohamedDashboard>div {
+                padding-bottom: 10px;
+            }
+            
+            .sectionOfProject .divItems .mohamedDashboard .date p {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+            }
+            
+            .sectionOfProject .divItems .mohamedDashboard p {
+                color: #5d5d5d;
+            }
+            
+            .sectionOfProject .divItems .mohamedDashboard .sideName {
+                display: flex;
+                justify-content: flex-end;
+                border-top: solid 1px gainsboro;
+                border-bottom: solid 1px gainsboro;
+                padding: 10px 0 10px 0;
+            }
+            
+            .sectionOfProject .divItems .mohamedDashboard .sideName div {
+                margin-left: 5px;
+                border-radius: 10px;
+                background-color: #e8e4e4;
+                padding: 5px;
+            }
+            
+            .sectionOfProject .divItems .mohamedDashboard .bottomSide {
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .sectionOfProject .divItems .mohamedDashboard .bottomSide .perso {
+                position: relative;
+                height: 5px;
+                width: 70%;
+                background: #e8e4e4;
+                border-radius: 5px;
+            }
+            
+            .sectionOfProject .divItems .mohamedDashboard .bottomSide .perso span {
+                position: absolute;
+                width: 70%;
+                background-color: blue;
+                height: 100%;
+                border-radius: 5px;
+            }
+            /*mohamedDashboard*/
+            
+            .sectionOfProject .divItems .mohamedPortal {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .sectionOfProject .divItems .mohamedPortal>div {
+                padding-bottom: 10px;
+            }
+            
+            .sectionOfProject .divItems .mohamedPortal .date p {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+            }
+            
+            .sectionOfProject .divItems .mohamedPortal p {
+                color: #5d5d5d;
+            }
+            
+            .sectionOfProject .divItems .mohamedPortal .sideName {
+                display: flex;
+                justify-content: flex-end;
+                border-top: solid 1px gainsboro;
+                border-bottom: solid 1px gainsboro;
+                padding: 10px 0 10px 0;
+            }
+            
+            .sectionOfProject .divItems .mohamedPortal .sideName div {
+                margin-left: 5px;
+                border-radius: 10px;
+                background-color: #e8e4e4;
+                padding: 5px;
+            }
+            
+            .sectionOfProject .divItems .mohamedPortal .bottomSide {
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .sectionOfProject .divItems .mohamedPortal .bottomSide .perso {
+                position: relative;
+                height: 5px;
+                width: 70%;
+                background: #e8e4e4;
+                border-radius: 5px;
+            }
+            
+            .sectionOfProject .divItems .mohamedPortal .bottomSide .perso span {
+                position: absolute;
+                width: 90%;
+                background-color: blue;
+                height: 100%;
+                border-radius: 5px;
+            }
+            /*Mohamed Portal*/
+            
+            .sectionOfProject .divItems .mohamedPortal {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .sectionOfProject .divItems .mohamedPortal>div {
+                padding-bottom: 10px;
+            }
+            
+            .sectionOfProject .divItems .mohamedPortal .date p {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+            }
+            
+            .sectionOfProject .divItems .mohamedPortal p {
+                color: #5d5d5d;
+            }
+            
+            .sectionOfProject .divItems .mohamedPortal .sideName {
+                display: flex;
+                justify-content: flex-end;
+                border-top: solid 1px gainsboro;
+                border-bottom: solid 1px gainsboro;
+                padding: 10px 0 10px 0;
+            }
+            
+            .sectionOfProject .divItems .mohamedPortal .sideName div {
+                margin-left: 5px;
+                border-radius: 10px;
+                background-color: #e8e4e4;
+                padding: 5px;
+            }
+            
+            .sectionOfProject .divItems .mohamedPortal .bottomSide {
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .sectionOfProject .divItems .mohamedPortal .bottomSide .perso {
+                position: relative;
+                height: 5px;
+                width: 70%;
+                background: #e8e4e4;
+                border-radius: 5px;
+            }
+            
+            .sectionOfProject .divItems .mohamedPortal .bottomSide .perso span {
+                position: absolute;
+                width: 40%;
+                background-color: red;
+                height: 100%;
+                border-radius: 5px;
+            }
+            /*Ahmed Application*/
+            
+            .sectionOfProject .divItems .ahmedApplication {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .sectionOfProject .divItems .ahmedApplication>div {
+                padding-bottom: 10px;
+            }
+            
+            .sectionOfProject .divItems .ahmedApplication .date p {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+            }
+            
+            .sectionOfProject .divItems .ahmedApplication p {
+                color: #5d5d5d;
+            }
+            
+            .sectionOfProject .divItems .ahmedApplication .sideName {
+                display: flex;
+                justify-content: flex-end;
+                border-top: solid 1px gainsboro;
+                border-bottom: solid 1px gainsboro;
+                padding: 10px 0 10px 0;
+            }
+            
+            .sectionOfProject .divItems .ahmedApplication .sideName div {
+                margin-left: 5px;
+                border-radius: 10px;
+                background-color: #e8e4e4;
+                padding: 5px;
+            }
+            
+            .sectionOfProject .divItems .ahmedApplication .bottomSide {
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .sectionOfProject .divItems .ahmedApplication .bottomSide .perso {
+                position: relative;
+                height: 5px;
+                width: 70%;
+                background: #e8e4e4;
+                border-radius: 5px;
+            }
+            
+            .sectionOfProject .divItems .ahmedApplication .bottomSide .perso span {
+                position: absolute;
+                width: 20%;
+                background-color: blue;
+                height: 100%;
+                border-radius: 5px;
+            }
+            /***** start section of courses ******/
+            
+            .sectionOfCourses {
+                background-color: var(--divPrincipal-backGround-color);
+                width: 100%;
+                z-index: 1;
+            }
+            
+            .sectionOfCourses .divItems {
+                display: grid;
+                gap: 20px;
+                grid-template-columns: repeat(5, auto);
+                padding: var(--divItems-padding);
+                width: var(--divPrincipal-width);
+            }
+            
+            .sectionOfCourses .divItems>div {
+                background-color: white;
+                border-radius: var(--main-border-radius);
+            }
+            
+            .sectionOfCourses .divItems .carte {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .sectionOfCourses .divItems .carte .image {
+                position: relative;
+                width: auto;
+            }
+            
+            .sectionOfCourses .divItems .carte .image img {
+                width: 100%;
+            }
+            
+            .sectionOfCourses .divItems .carte .image .spe {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                top: 10px;
+                left: 10px;
+                border-radius: 50%;
+                border: 2px white solid;
+            }
