@@ -6,6 +6,8 @@ let sectionOfProfile = document.querySelector(".sectionOfProfile");
 sectionOfProfile.style.display = "none";
 let sectionOfProject = document.querySelector(".sectionOfProject")
 sectionOfProject.style.display = "none";
+let sectionOfCourses = document.querySelector(".sectionOfCourses")
+sectionOfCourses.style.display = "none";
 
 
 
