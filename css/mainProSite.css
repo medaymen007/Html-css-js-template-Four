@@ -2335,3 +2335,127 @@
             .sectionOfCourses .divItems .carte .btn {
                 margin-bottom: 15px;
             }
+            /*star section of friends*/
+            
+            .sectionOfFriends {
+                background-color: var(--divPrincipal-backGround-color);
+                width: 100%;
+                z-index: 1;
+            }
+            
+            .sectionOfFriends .divItems {
+                display: grid;
+                gap: 20px;
+                grid-template-columns: repeat(5, auto);
+                padding: var(--divItems-padding);
+                width: var(--divPrincipal-width);
+            }
+            
+            .sectionOfFriends .divItems .carte>div:not(:last-child) {
+                margin-bottom: 10px;
+            }
+            
+            .sectionOfFriends .divItems .carte .image {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .sectionOfFriends .divItems .carte .image img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+            
+            .sectionOfFriends .divItems>div {
+                background-color: white;
+                border-radius: var(--main-border-radius);
+                padding: var(--divItems-padding);
+            }
+            
+            .sectionOfFriends .divItems .carte .phoneAndMessage {
+                display: flex;
+            }
+            
+            .sectionOfFriends .divItems .carte .phoneAndMessage i {
+                width: 30px;
+                height: 30px;
+                background-color: #ececec;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #5d5d5d;
+                margin-left: 6px;
+            }
+            
+            .sectionOfFriends .divItems .carte .user {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-bottom: #e8e4e4 solid 1px;
+                padding-bottom: 8px;
+            }
+            
+            .sectionOfFriends .divItems .carte .user>div {
+                margin-bottom: 8px;
+            }
+            
+            .sectionOfFriends .divItems .carte .activites .items>div:not(:last-child) {
+                margin-bottom: 8px;
+            }
+            
+            .sectionOfFriends .divItems .carte .activites {
+                padding: 5px;
+                display: flex;
+                justify-content: space-between;
+                border-bottom: #e8e4e4 solid 1px;
+                align-items: center;
+            }
+            
+            .sectionOfFriends .divItems .carte .activites .vip {
+                color: rgba(255, 166, 0, 0.414);
+            }
+            
+            .sectionOfFriends .divItems .carte .activites .vip {
+                height: 100%;
+            }
+            
+            .sectionOfFriends .divItems .carte .items>div {
+                display: flex;
+                align-items: center;
+            }
+            
+            .sectionOfFriends .divItems .carte .items>div i {
+                margin-right: 8px;
+                font-size: small;
+            }
+            
+            .sectionOfFriends .divItems .carte .footer {
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            .sectionOfFriends .divItems .carte .footer button,
+            .sectionOfFriends .divItems .carte .footer p {
+                font-size: small;
+            }
+            
+            .sectionOfFriends .divItems .carte .footer .btn {
+                display: flex;
+            }
+            
+            .sectionOfFriends .divItems .carte .footer .btn button:last-child {
+                border: none;
+                background-color: red;
+                padding: 2px;
+                border-radius: 5px;
+            }
+            
+            .sectionOfFriends .divItems .carte .footer .btn button:first-child {
+                background-color: blue;
+                border: none;
+                margin-right: 3px;
+                padding: 2px;
+                border-radius: 5px;
+            }
