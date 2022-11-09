@@ -1852,7 +1852,7 @@
                         .sectionOfProfile .divItems .caption .personalInfo>div,
                         .sectionOfProfile .divItems .caption .jobInfo>div,
                         .sectionOfProfile .divItems .caption .billingInfo>div {
-                            margin-bottom: 10px;
+                            margin-bottom: 11px;
                         }
                         .sectionOfProfile .divItems .caption>div {
                             margin-bottom: 15px;
