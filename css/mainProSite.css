@@ -89,7 +89,6 @@
                     }
                     
                     @media(max-width:767px) {
-                        .divPrincipal {}
                         .divPrincipal .allDIVS {
                             width: 80%;
                         }
@@ -189,7 +188,6 @@
                         justify-content: space-between;
                         height: 70px;
                         align-items: center;
-                        width: 100%;
                     }
                     
                     .nevBarComponent img {
@@ -1405,11 +1403,8 @@
                     
                     @media(max-width:767px) {
                         .sectionOfSetting .divItems {
-                            padding: var(--divItems-padding);
+                            padding: 17px;
                             grid-template-columns: minmax(100px, 1fr);
-                            margin-left: 10px;
-                            margin-right: 10px;
-                            gap: 10px;
                         }
                         .sectionOfSetting .divItems .securityInfo {
                             height: fit-content;
@@ -1883,6 +1878,36 @@
                         background-color: white;
                         padding: var(--divItems-padding);
                         border-radius: var(--main-border-radius);
+                    }
+                    
+                    @media(max-width:767px) {
+                        .sectionOfProject .divItems {
+                            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                        }
+                        .sectionOfProject .divItems .aymenDashboard .sideName,
+                        .sectionOfProject .divItems .academyPortal .sideName,
+                        .sectionOfProject .divItems .chattingApplication .sideName,
+                        .sectionOfProject .divItems .ahmedDashboard .sideName,
+                        .sectionOfProject .divItems .ahmedPortal .sideName,
+                        .sectionOfProject .divItems .academyPortal .sideName,
+                        .sectionOfProject .divItems .chattingApplication .sideName,
+                        .sectionOfProject .divItems .mohamedApplication .sideName,
+                        .sectionOfProject .divItems .mohamedDashboard .sideName {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        .sectionOfProject .divItems .aymenDashboard .sideName>div,
+                        .sectionOfProject .divItems .academyPortal .sideName>div,
+                        .sectionOfProject .divItems .chattingApplication .sideName>div,
+                        .sectionOfProject .divItems .ahmedDashboard .sideName>div,
+                        .sectionOfProject .divItems .ahmedPortal .sideName>div,
+                        .sectionOfProject .divItems .academyPortal .sideName>div,
+                        .sectionOfProject .divItems .chattingApplication .sideName>div,
+                        .sectionOfProject .divItems .mohamedApplication .sideName>div,
+                        .sectionOfProject .divItems .mohamedDashboard .sideName>div {
+                            margin-bottom: 5px;
+                            width: fit-content;
+                        }
                     }
                     /*Aymen Dashboard*/
                     
@@ -2490,6 +2515,13 @@
                         width: var(--divPrincipal-width);
                     }
                     
+                    @media(max-width:767px) {
+                        .sectionOfCourses .divItems {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+                    
                     .sectionOfCourses .divItems>div {
                         background-color: white;
                         border-radius: var(--main-border-radius);
@@ -2587,6 +2619,13 @@
                         grid-template-columns: repeat(5, auto);
                         padding: var(--divItems-padding);
                         width: var(--divPrincipal-width);
+                    }
+                    
+                    @media(max-width:767px) {
+                        .sectionOfFriends .divItems {
+                            display: flex;
+                            flex-direction: column;
+                        }
                     }
                     
                     .sectionOfFriends .divItems .carte>div:not(:last-child) {
@@ -2711,6 +2750,12 @@
                         grid-template-columns: repeat(7, auto);
                         padding: var(--divItems-padding);
                         width: var(--divPrincipal-width);
+                    }
+                    
+                    @media (max-width:767px) {
+                        .sectionOfFiles .divItems {
+                            grid-template-columns: repeat(1, auto);
+                        }
                     }
                     
                     .sectionOfFiles .divItems>div {
@@ -2869,9 +2914,12 @@
                     .sectionOfPlans .divItems {
                         display: grid;
                         gap: 15px;
-                        grid-template-columns: repeat(3, auto);
                         padding: var(--divItems-padding);
                         width: var(--divPrincipal-width);
+                    }
+                    
+                    .sectionOfPlans .divItems {
+                        grid-template-columns: repeat(1, auto);
                     }
                     
                     .sectionOfPlans .divItems .option>div {
